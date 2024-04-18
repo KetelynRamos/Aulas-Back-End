@@ -9,8 +9,8 @@ function clearDisplay() {
 
 function calcular() {
     var expressao = document.getElementById('display').value;
-    var operandos = expressao.split(/[+\-*\/]/);
-    var operador = expressao.match(/[+\-*\/]/);    
+    var operandos = expressao.split(/[+\-x\/]/);
+    var operador = expressao.match(/[+\-x\/]/);    
     if (operandos.length !== 2 || !operador) {
         document.getElementById('display').value = 'Erro';
         return;
@@ -25,7 +25,7 @@ function calcular() {
         case '-':
             resultado = num1 - num2;
             break;
-        case '*':
+        case 'x':
             resultado = num1 * num2;
             break;
         case '/':
